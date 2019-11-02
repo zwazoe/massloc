@@ -10,7 +10,7 @@
     "server": "nodemon  server.js",
     "client": "SET PORT=3001 && npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install"
   },
   "author": "Lesly Revenge",
   "license": "MIT",
