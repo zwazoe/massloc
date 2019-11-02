@@ -1,0 +1,97 @@
+Section: Add Profile
+-- fixed read items: there was an error because of passing create actions that did not exist.
+-- delete action
+-- public action
+-- published action
+
+Section: Paperwork
+-- make profile item universal for all]]
+-- show profile name instead of just id
+-- copy all action
+-- start next section
+
+Section: Mobile Friendly for my stuff
++- template
+
+Section: Login Section
+-- Show current profile on tab.
++- Make sure users are required to create at least one profile before continues.
+
+Section: Plug My Business
+
++- change manage my business to the actual business name. 
+-- show /sell if business is included. 
+-- show business navigation.
+-- restrict business pages on rather the user is logged in and have a business account. 
+
+
+sell stuff:
+-- add appropriate page title
+-- show the item after it is added. 
+
+-- Connections
+- complete requests
+- complete business themes
+complete settings: 
+- add busienss base on block listed
+- add business based on whitelisted providers.
+
+
+- remove everythign else.
+
+
+add product items
+- make srue all options are showing
+add produccs
+- get categories
+-- get shelfs
+- endorcement
+- staff
+- brands
+- culture
+- awards
+- parent
+
+
+add shelfs
+
+
+
+
+
+***************** OUT OF SCOPE ***********************
++- add privacy based on the tabs the user select
+
+Section: Login Section
++- social media Login
++- forgot password.
++- make sure selected profile icon is showing by mystuff. 
++- inline editing
+
+
+Section: Add Profile
++- remove all console.log
++- remove 50 warnings
++- remove all errors
+
++- be able to change the nomenclature of tabs
++- be able to change the nomenclature of no data
+
+
++- sell stuff
+- make sure items are being uploaded appropriatly
+
+add product items
+- make sure appropriate icons are being shown
+- make sure all fields are being added and saved
+
+
+
+Connection requests
+
+submit a request 
+select the type of providers
+send a meeting
+
+accept requests
+deny requests
