@@ -6,10 +6,6 @@ const path = require('path');
 const app = express();
 // // people
 const users = require('./routes/api/people/users');
-const profile = require('./routes/api/people/profile');
-const business = require('./routes/api/place/business/business');
-const readAll = require('./routes/api/things/ReadAll');
-const crudAll = require('./routes/api/things/CrudAll');
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -19,11 +15,6 @@ mongoose.connect(db).then(() => console.log('MongoDB Connected')).catch((err) =>
 // Passport middleware
 app.use(passport.initialize());
 require('./config/passport')(passport);
-// //  Routes People
-app.use('/api/profile', profile);
-app.use('/api/business', business);
-app.use('/api/read-all', readAll);
-app.use('/api/crud', crudAll);
 
 app.use('/api/users', users);
 
