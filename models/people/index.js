@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let collections = {
-	Profile: [ "attributes_phone", "attributes_relationship", "attributes_dob", 'attributes_employer','attributes_employer_association', 'attributes_place_association'  ,"attributes_image", "attributes_icon", "attributes_video", 'attributes_default', "attributes_place", "attributes_apartment", "attributes_employer_status", "attributes_place_status"], 
-    Location: [  "attributes_address","attributes_apartment"],
-    Document: [ "attributes_upload","attributes_file_type" ],
-    Portfolio: [  "attributes_portfolio_item", "attributes_date_start", "attributes_date_end", "attributes_expiration", "attributes_file_type", "attributes_reference"],
+	Profile: ["classification"], 
 }
 
 
@@ -55,18 +52,27 @@ Object.entries(collections).map((items) => {
 	let payload = items[1]
 
 	let pre_schema = {}
+	pre_schema.name = { type: String, default: "John Doe" }
+	
+		pre_schema.symptoms = [
+		{
+			diagnostic: {
+				type: String,
+				require: true
+			},
+			classification: String,
+			detail: String,
+			emergency_contact_name: { type: String },
+			emergency_contact_phone: { type: String },
+			provider: { type: Schema.Types.ObjectId, ref: 'users'}
+			
+		}
+	]
 	// get the data type to all the keys
 	payload.map(key => pre_schema[key] = getDataType(key))
 	// assign items that should be includes in all models
-	pre_schema.attributes_section = [{ type: Schema.Types.ObjectId, ref: 'sections'}]
-	pre_schema.attributes_user = { type: Schema.Types.ObjectId, ref: 'users'}
-	pre_schema.attributes_profile = { type: Schema.Types.ObjectId, ref: 'profiles'}
-	pre_schema.attributes_pricing = Number;
-	pre_schema.attributes_title = String;
-	pre_schema.attributes_parent = String;
-	pre_schema.attributes_type = String;
-	pre_schema.attributes_description = String;
-	
+	pre_schema.user = { type: Schema.Types.ObjectId, ref: 'users'}
+	pre_schema.creator = { type: Schema.Types.ObjectId, ref: 'users'}
 	pre_schema.attributes_public = { type: Boolean, default: false }
 	pre_schema.attributes_published = { type: Boolean, default: true }
 	pre_schema.attributes_invisible = { type: Boolean, default: false }
