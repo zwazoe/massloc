@@ -103,7 +103,7 @@ router.post('/patient', passport.authenticate('jwt', { session: false }), (req, 
 	if (!isValid) {
 		return res.status(400).json(errors);
 	}
-	const profileFields = {...req.body};
+	let profileFields = req.body;
 	profileFields.symptoms && profileFields.symptoms.map(item => {
 		item.provider = req.user.id
 	})
