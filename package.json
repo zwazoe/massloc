@@ -47,7 +47,7 @@
     "styled-theme": "^0.3.3",
     "uppy-server": "^0.13.4",
     "validator": "^9.4.1",
-    "yarn": "^1.15.2"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {}
 }
