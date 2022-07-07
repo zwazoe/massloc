@@ -29,7 +29,7 @@
     "jsonwebtoken": "^8.2.0",
     "lodash": "^4.17.15",
     "mad-form": "^3.0.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "money-math": "^2.5.1",
     "mongoose": "^5.0.12",
     "node-sass": "^4.12.0",
